@@ -1,0 +1,6 @@
+{
+  "name": "whatsapp",
+  "version": "0.1.0",
+  "description": "Message Claude Code from WhatsApp. Your phone becomes the terminal.",
+  "author": { "name": "Navid Moazzez", "url": "https://navid.me" }
+}

@@ -1,0 +1,18 @@
+# Build output
+/whatsapp-mcp
+/dist/
+
+# Local WhatsApp session and message history. Never commit these: the session
+# files are live credentials for the linked device, and the database is the
+# full contents of your inbox.
+/data/
+*.db
+*.db-wal
+*.db-shm
+
+# Channel plugin dependencies
+/channel/node_modules/
+
+# macOS
+.DS_Store
+dist/

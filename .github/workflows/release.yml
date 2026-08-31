@@ -1,0 +1,63 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+
+      # Pure Go, no cgo, so every target builds from one machine.
+      - name: Build every target
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          mkdir -p dist
+          for t in darwin_arm64 darwin_amd64 linux_amd64 linux_arm64 windows_amd64; do
+            GOOS="${t%%_*}"; GOARCH="${t##*_}"
+            EXT=""; [ "$GOOS" = "windows" ] && EXT=".exe"
+            CGO_ENABLED=0 GOOS=$GOOS GOARCH=$GOARCH \
+              go build -ldflags "-s -w -X main.version=$VERSION" \
+              -o "dist/whatsapp-mcp$EXT" ./cmd/whatsapp-mcp
+            gzip -c "dist/whatsapp-mcp$EXT" > "dist/whatsapp-mcp_$t.gz"
+            rm -f "dist/whatsapp-mcp$EXT"
+          done
+          ls -la dist
+
+      - name: Publish the release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.gz
+          generate_release_notes: true
+
+  npm:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      # The version has to match the tag, or postinstall downloads a release
+      # that does not exist.
+      - name: Match the package version to the tag
+        working-directory: npm
+        run: npm version "${GITHUB_REF_NAME#v}" --no-git-tag-version --allow-same-version
+
+      - name: Publish
+        working-directory: npm
+        run: |
+          cp ../LICENSE ../README.md .
+          npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

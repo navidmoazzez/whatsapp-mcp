@@ -1,0 +1,9 @@
+{
+  "name": "whatsapp-channel",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0"
+  }
+}

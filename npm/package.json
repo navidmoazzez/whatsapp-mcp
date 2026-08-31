@@ -1,0 +1,19 @@
+{
+  "name": "@thenavidm/whatsapp-mcp",
+  "version": "0.5.0",
+  "description": "WhatsApp MCP server for Claude Code and AI agents. Search your whole message history, read any conversation, send messages and voice notes. One Go binary, read-only by default.",
+  "bin": { "whatsapp-mcp": "./bin/cli.js" },
+  "files": ["bin", "README.md", "LICENSE"],
+  "type": "module",
+  "license": "MIT",
+  "author": "Navid Moazzez <https://navid.me>",
+  "keywords": [
+    "mcp", "mcp-server", "model-context-protocol", "whatsapp", "whatsapp-mcp",
+    "claude", "claude-code", "ai-agents", "whatsmeow", "messaging",
+    "full-text-search", "transcription", "voice-notes", "llm-tools", "anthropic"
+  ],
+  "repository": { "type": "git", "url": "git+https://github.com/thenavidm/whatsapp-mcp.git" },
+  "homepage": "https://navid.me",
+  "engines": { "node": ">=20" },
+  "scripts": { "postinstall": "node ./bin/install.js" }
+}
