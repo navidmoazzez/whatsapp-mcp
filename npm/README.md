@@ -44,6 +44,7 @@ Claude: Searching your WhatsApp history.
 | 11 | [Message Claude from WhatsApp](#11-message-claude-from-whatsapp) | Optional. Your phone as the terminal |
 | 12 | [Running it 24/7](#12-running-it-247) | On a server, so it never sleeps |
 | 13 | [Build from source](#13-build-from-source) | Contributing |
+| 14 | [FAQ](#faq-) | Common questions |
 
 ---
 
@@ -937,6 +938,124 @@ Layout:
 | `internal/safety` | Send policy, allowlist, rate limit, audit log |
 
 Issues and pull requests welcome.
+
+---
+
+## FAQ ❓
+
+<details>
+<summary><strong>What is an MCP server?</strong></summary>
+
+Model Context Protocol is a standard way to give an AI assistant access to a
+tool or a data source. An MCP server exposes a set of functions, and a client
+like Claude Code or Claude Desktop calls them during a conversation. This one
+exposes WhatsApp.
+
+You install it once, point your client at it, and then ask in plain language.
+You never call the tools yourself.
+</details>
+
+<details>
+<summary><strong>Is this the official WhatsApp API?</strong></summary>
+
+No. It uses the companion device protocol, the same one WhatsApp Web uses, so
+it reaches your real personal inbox. WhatsApp does not support this for
+automation.
+
+The official Business API is a different thing entirely. It only reaches a
+business number you own, cannot see a personal inbox, and outside a 24 hour
+window it can only send pre-approved templates.
+</details>
+
+<details>
+<summary><strong>Could my number get banned?</strong></summary>
+
+Yes. WhatsApp bans accounts for automated behaviour, and sending in volume is
+the fastest way to get flagged. Reading is far lower risk than sending.
+
+That is one reason sending is off by default and rate limited when you turn it
+on.
+</details>
+
+<details>
+<summary><strong>Do my messages get uploaded anywhere?</strong></summary>
+
+Not by this software. There is no telemetry and no phone home. Your history
+sits in a SQLite file on whatever machine you run it on.
+
+Two exceptions you opt into. A hosted transcription provider receives the audio
+of a voice note, and nothing else. And anything a tool returns enters your
+conversation with the model, which goes wherever that model runs. That second
+one is true of every MCP server and is the thing to understand before
+installing this.
+</details>
+
+<details>
+<summary><strong>Does my phone need to stay on?</strong></summary>
+
+No. It links as a companion device, so once paired your phone can be asleep or
+out of battery. The machine running the server needs to be awake, which is why
+some people put it on a small always-on box.
+</details>
+
+<details>
+<summary><strong>How far back does the history go?</strong></summary>
+
+WhatsApp decides. It pushes a backlog when you pair, and how much varies. This
+asks for as much as it will give, which in practice is months to years, but it
+is never guaranteed complete.
+
+Everything arriving from that moment on is captured in full.
+</details>
+
+<details>
+<summary><strong>Can it read my voice notes?</strong></summary>
+
+Yes, if you turn transcription on. They become searchable text alongside
+everything you have typed, which is the single biggest blind spot in a WhatsApp
+archive.
+
+Four providers: local Whisper if nothing should leave your machine, or Groq,
+OpenAI and ElevenLabs if you want it faster or more accurate across languages.
+</details>
+
+<details>
+<summary><strong>Can it send as me?</strong></summary>
+
+It can, and it is off by default. A companion device is your account, so
+anything it sends is from you.
+
+When you turn it on it previews first, obeys a chat allowlist, is rate limited,
+and writes every attempt to a log no tool can edit.
+</details>
+
+<details>
+<summary><strong>Can someone hide instructions in a message to hijack it?</strong></summary>
+
+That is the real risk, and it is why sending is locked down. Every message in
+your inbox is text somebody else wrote, and an agent that reads it and can also
+send is exposed.
+
+Nothing removes that risk entirely. [SECURITY.md](./SECURITY.md) covers what is
+done about it and what is not.
+</details>
+
+<details>
+<summary><strong>Does it work with groups?</strong></summary>
+
+Yes. Group chats are searched and read like any other conversation, and sender
+names are resolved so you can see who said what.
+</details>
+
+<details>
+<summary><strong>What happens if I unlink it?</strong></summary>
+
+It stops immediately. Log the device out under Linked Devices on your phone and
+it loses access at once.
+
+The history already downloaded stays on your machine until you delete the data
+directory.
+</details>
 
 ---
 
