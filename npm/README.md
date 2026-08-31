@@ -9,7 +9,7 @@
 [![YouTube](https://img.shields.io/badge/YouTube-@thenavidm-red?logo=youtube&logoColor=white)](https://youtube.com/@thenavidm?sub_confirmation=1)
 [![X](https://img.shields.io/badge/X-@thenavidm-black?logo=x)](https://x.com/thenavidm)
 
-Give any AI agent real access to your personal WhatsApp. Search your history, read any conversation, and send messages, from Claude Code, Claude Desktop, claude.ai, Cursor, Codex, or any MCP client.
+Give any AI agent real access to your personal WhatsApp. Search your history, read any conversation, and send messages, from Claude Code, Claude Desktop, Claude.ai, Cursor, Codex, or any MCP client.
 
 One binary that links as a companion device, the same way WhatsApp Web does. No Python, no Docker, no second process.
 
@@ -347,7 +347,7 @@ shape is always the same:
 | Arguments | none, or `--allow-send` |
 | Environment | none needed |
 
-#### claude.ai and ChatGPT on the web
+#### Claude.ai and ChatGPT on the web
 
 These connect from their own servers rather than from your browser, so they need
 a URL rather than a local command. Serve it over HTTP:
@@ -374,7 +374,7 @@ further, using the health endpoint, which needs no token:
 curl https://something.trycloudflare.com/healthz
 ```
 
-**In claude.ai:** go to Settings, then Connectors, then Add custom connector.
+**In Claude.ai:** go to Settings, then Connectors, then Add custom connector.
 Paste the tunnel URL. Put the bearer token in the advanced settings.
 
 **In ChatGPT:** enable Developer mode in settings, then add the same URL as a
@@ -829,7 +829,7 @@ voice rather than as text.
 Everything above runs on your own machine, which means it works while your
 computer is awake and stops when it sleeps.
 
-If you want your agent to reach your WhatsApp at any hour, from claude.ai or
+If you want your agent to reach your WhatsApp at any hour, from Claude.ai or
 from your phone, the server has to live somewhere that stays on. Any small
 Linux box does it.
 
@@ -897,7 +897,7 @@ whatsapp.example.com {
 
 Point DNS at the server, and your MCP URL becomes
 `https://whatsapp.example.com` with the bearer token from
-`/etc/whatsapp-mcp.env`. That is the URL claude.ai and ChatGPT can use.
+`/etc/whatsapp-mcp.env`. That is the URL Claude.ai and ChatGPT can use.
 
 ### Moving it later
 

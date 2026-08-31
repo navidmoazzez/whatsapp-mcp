@@ -15,7 +15,7 @@ First release.
 Gives any AI agent access to your personal WhatsApp. Search your whole history,
 read any conversation, transcribe voice notes, and send messages, from Claude
 Code, Claude Desktop, Cursor, VS Code, Windsurf, Zed, Cline, Codex CLI, Gemini
-CLI, or over HTTP from claude.ai and ChatGPT.
+CLI, or over HTTP from Claude.ai and ChatGPT.
 
 ### Install
 
@@ -54,7 +54,7 @@ whatsapp-mcp login
 
 ### Remote access
 
-- `--http` serves streamable HTTP for claude.ai, ChatGPT and any client that
+- `--http` serves streamable HTTP for Claude.ai, ChatGPT and any client that
   needs a URL rather than a local command.
 - A bearer token is mandatory. Serving without one is refused.
 - Tokens are compared in constant time, and the `Bearer` scheme is required.
@@ -91,4 +91,4 @@ API errors, and every unauthenticated HTTP shape.
 
 - Not yet verified against a live WhatsApp account.
 - Sending media and voice notes is not implemented yet, only text.
-- claude.ai and ChatGPT need a public URL, so a tunnel is required.
+- Claude.ai and ChatGPT need a public URL, so a tunnel is required.
