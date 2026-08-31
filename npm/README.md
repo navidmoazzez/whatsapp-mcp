@@ -9,7 +9,7 @@
 [![YouTube](https://img.shields.io/badge/YouTube-@thenavidm-red?logo=youtube&logoColor=white)](https://youtube.com/@thenavidm?sub_confirmation=1)
 [![X](https://img.shields.io/badge/X-@thenavidm-black?logo=x)](https://x.com/thenavidm)
 
-Give any AI agent real access to your WhatsApp. Search your history, read any conversation, and send messages, from Claude Code, Claude Desktop, claude.ai, Cursor, Codex, or any MCP client.
+Give any AI agent real access to your personal WhatsApp. Search your history, read any conversation, and send messages, from Claude Code, Claude Desktop, claude.ai, Cursor, Codex, or any MCP client.
 
 One binary that links as a companion device, the same way WhatsApp Web does. No Python, no Docker, no second process.
 
