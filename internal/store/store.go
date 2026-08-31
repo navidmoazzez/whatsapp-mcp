@@ -72,7 +72,7 @@ func Open(path string) (*Store, error) {
 	}
 
 	// SQLite takes a write lock per connection. More than one writer produces
-	// SQLITE_BUSY under concurrent history sync, so serialise writes here.
+	// SQLITE_BUSY under concurrent history sync, so serialize writes here.
 	db.SetMaxOpenConns(1)
 
 	if _, err := db.Exec(schema); err != nil {

@@ -174,7 +174,7 @@ func New(ctx context.Context, opts Options) (*Client, error) {
 }
 
 // Connect links the device, showing a QR code if this is a first pairing, and
-// blocks until the connection is established or ctx is cancelled.
+// blocks until the connection is established or ctx is canceled.
 func (c *Client) Connect(ctx context.Context) error {
 	if c.wm.Store.ID != nil {
 		// Already paired. Reconnect using the stored session.
@@ -515,7 +515,7 @@ func ExtractText(msg *waE2E.Message) string {
 		return "[video note]"
 	}
 
-	// Nothing recognised. Storing an empty string here is silent data loss:
+	// Nothing recognized. Storing an empty string here is silent data loss:
 	// the reader sees a message that appears to say nothing, with no way to
 	// tell that something was dropped. Naming the payload is honest about it
 	// and makes the gap findable rather than invisible.
@@ -750,7 +750,7 @@ func (c *Client) SyncContacts(ctx context.Context) (int, error) {
 		// An earlier version did, using GetLIDForPN, and it wrote the wrong
 		// person's name against a LID: two contacts resolved to the same
 		// identifier and one overwrote the other, so a real conversation was
-		// labelled with somebody else's name. Mislabelling who you are talking
+		// labeled with somebody else's name. Mislabelling who you are talking
 		// to is worse than showing no name at all.
 		//
 		// LID chats get their name from history sync, which carries the

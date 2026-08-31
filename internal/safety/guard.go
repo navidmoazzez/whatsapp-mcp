@@ -5,7 +5,7 @@
 // injection: a message in a group chat can instruct the model to forward
 // private history somewhere.
 //
-// Naming that risk in a README is not a defence. This package is the defence.
+// Naming that risk in a README is not a defense. This package is the defense.
 package safety
 
 import (

@@ -20,7 +20,7 @@ Please do not open a public issue for a security problem.
 Every message in a WhatsApp inbox is text written by somebody else. An agent
 that can read that text and also send messages can be attacked through it:
 somebody puts instructions in a group chat, your agent reads them while
-summarising, and acts on them.
+summarizing, and acts on them.
 
 This is [the lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/):
 private data, untrusted content, and a way out. Every WhatsApp MCP server has
@@ -28,7 +28,7 @@ this exposure. Most name it in a README and stop there.
 
 ## What actually stops it
 
-Five defences, each covered by tests.
+Five defenses, each covered by tests.
 
 **Read-only by default.** A default install physically cannot send. The tool
 exists, is advertised, and refuses. Sending needs `--allow-send`, passed
@@ -47,7 +47,7 @@ reachable, whatever the model decides.
 `audit.log`. No tool can read or edit that file, so the agent cannot cover its
 tracks.
 
-Message text returned to the model is also labelled as data rather than
+Message text returned to the model is also labeled as data rather than
 instructions. That is a mitigation, not a fix.
 
 ## The network

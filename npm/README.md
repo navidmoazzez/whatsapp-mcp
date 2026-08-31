@@ -53,7 +53,7 @@ Claude: Searching your WhatsApp history.
 Once connected, you talk to your own message history in plain language.
 
 - What did I promise Sarah about the deadline?
-- Summarise the 400 messages in the founders group since Tuesday.
+- Summarize the 400 messages in the founders group since Tuesday.
 - Find every conversation where someone sent me an invoice.
 - Who have I not replied to this week?
 - What was the address Tom sent me last month?
@@ -544,9 +544,9 @@ it.
 
 ## 5. Sending safely
 
-Every message in your WhatsApp inbox is text somebody else wrote. An agent that can read that text and also send messages can be attacked through it. Someone puts instructions in a group chat, your agent reads them while summarising, and acts on them. This is [the lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/): private data, untrusted content, and a way out.
+Every message in your WhatsApp inbox is text somebody else wrote. An agent that can read that text and also send messages can be attacked through it. Someone puts instructions in a group chat, your agent reads them while summarizing, and acts on them. This is [the lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/): private data, untrusted content, and a way out.
 
-Every other WhatsApp MCP server I could find names this risk in its README and then does nothing about it. This one has five defences, and they are covered by tests.
+Every other WhatsApp MCP server I could find names this risk in its README and then does nothing about it. This one has five defenses, and they are covered by tests.
 
 **Read-only by default.** A default install physically cannot send. The tool exists, it is advertised, and it refuses. You have to add `--allow-send` deliberately.
 
@@ -564,7 +564,7 @@ Nothing else can be written to, whatever the model decides.
 
 **Audit log.** Every attempted write, allowed or refused, is appended to `~/.whatsapp-mcp/audit.log`. There is no tool that can read or edit that file, so the agent cannot cover its tracks.
 
-Results that contain other people's words are also labelled as data rather than instructions when they are handed to the model. That is a mitigation, not a fix. Nothing here makes prompt injection impossible, and you should still read previews.
+Results that contain other people's words are also labeled as data rather than instructions when they are handed to the model. That is a mitigation, not a fix. Nothing here makes prompt injection impossible, and you should still read previews.
 
 ---
 
@@ -768,7 +768,7 @@ Read this properly. It is short.
 
 **This is not an official WhatsApp API.** It uses the reverse engineered companion device protocol. WhatsApp does not support it and does not have to keep it working.
 
-**Your number could be banned.** WhatsApp bans accounts for automated behaviour. Sending in volume is the fastest way to get flagged. The sending defaults here are conservative for that reason as well as for security.
+**Your number could be banned.** WhatsApp bans accounts for automated behavior. Sending in volume is the fastest way to get flagged. The sending defaults here are conservative for that reason as well as for security.
 
 **Companion device links expire.** Expect to run `whatsapp-mcp login` again occasionally.
 
@@ -869,7 +869,7 @@ cheapest tier at any provider is plenty.
 
 | Provider | Notes |
 |---|---|
-| [Hetzner](https://navid.link/hetzner) | Best value per euro. European data centres, plus US |
+| [Hetzner](https://navid.link/hetzner) | Best value per euro. European data centers, plus US |
 | [Hostinger](https://navid.link/hostinger) | Simple panel, good if you want less to think about |
 | [DigitalOcean](https://navid.link/digitalocean) | Widest choice of regions, the best documentation |
 
@@ -970,7 +970,7 @@ window it can only send pre-approved templates.
 <details>
 <summary><strong>Could my number get banned?</strong></summary>
 
-Yes. WhatsApp bans accounts for automated behaviour, and sending in volume is
+Yes. WhatsApp bans accounts for automated behavior, and sending in volume is
 the fastest way to get flagged. Reading is far lower risk than sending.
 
 That is one reason sending is off by default and rate limited when you turn it
@@ -1065,7 +1065,7 @@ Navid Moazzez is a leading AI business strategist and the host of the AI Creator
 
 ## Dependencies
 
-| Library | Licence | What it does |
+| Library | License | What it does |
 |---|---|---|
 | [whatsmeow](https://github.com/tulir/whatsmeow) | MPL-2.0 | The WhatsApp companion device protocol |
 | [Go MCP SDK](https://github.com/modelcontextprotocol/go-sdk) | Apache-2.0 | The MCP server and client |

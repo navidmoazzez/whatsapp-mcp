@@ -29,7 +29,7 @@ func TestTokensAreLongAndPrefixed(t *testing.T) {
 		t.Error("tokens must not repeat")
 	}
 	if !strings.HasPrefix(a, "wamcp_") {
-		t.Errorf("want a recognisable prefix, got %q", a)
+		t.Errorf("want a recognizable prefix, got %q", a)
 	}
 	if len(a) < 40 {
 		t.Errorf("token is too short to resist guessing: %d chars", len(a))
