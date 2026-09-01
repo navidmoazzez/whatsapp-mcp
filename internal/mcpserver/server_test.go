@@ -72,6 +72,10 @@ func session(t *testing.T, allowSend bool, allowlist ...string) (*mcp.ClientSess
 	if err != nil {
 		t.Fatalf("guard: %v", err)
 	}
+	// Close the audit log, or Windows refuses to delete the temp dir: an open
+	// handle blocks unlink there, where POSIX allows it. Every test failed on
+	// windows-latest for this and only this reason.
+	t.Cleanup(func() { guard.Close() })
 
 	fake := &fakeWA{}
 	srv := New(Deps{Store: st, Client: fake, Guard: guard})

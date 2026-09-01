@@ -45,8 +45,6 @@ Claude: Searching your WhatsApp history.
 | 12 | [Running it 24/7](#12-running-it-247) | On a server, so it never sleeps |
 | 14 | [FAQ](#faq-) | Common questions |
 
----
-
 ## 1. What you can ask it
 
 Once connected, you talk to your own message history in plain language.
@@ -60,8 +58,6 @@ Once connected, you talk to your own message history in plain language.
 - Did I ever agree to a price on that project, and what was it?
 
 The last one is the point. Full text search runs across your entire history, including transcripts of voice notes, ranked by relevance rather than by date.
-
----
 
 ## 2. Install
 
@@ -383,8 +379,6 @@ Two things to know. A quick tunnel URL changes every restart, so use a named
 tunnel or your own host if you want it stable. And your machine has to be
 awake, because the server is running on it.
 
----
-
 ## 3. First run
 
 Run `whatsapp-mcp login` and a QR code is drawn in your terminal.
@@ -427,8 +421,6 @@ Your phone will say message sync is paused when the service is not running.
 Start it and it resumes on its own. Nothing is lost in the meantime, WhatsApp
 queues messages and delivers them on reconnect, the same as WhatsApp Web after
 a few days closed.
-
----
 
 ## 4. Tools
 
@@ -539,8 +531,6 @@ ffmpeg -i input.mp3 -c:a libopus -b:a 32k -ar 24000 -application voip out.ogg
 ffmpeg is optional and only needed for that conversion. Nothing else here uses
 it.
 
----
-
 ## 5. Sending safely
 
 Every message in your WhatsApp inbox is text somebody else wrote. An agent that can read that text and also send messages can be attacked through it. Someone puts instructions in a group chat, your agent reads them while summarizing, and acts on them. This is [the lethal trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/): private data, untrusted content, and a way out.
@@ -564,8 +554,6 @@ Nothing else can be written to, whatever the model decides.
 **Audit log.** Every attempted write, allowed or refused, is appended to `~/.whatsapp-mcp/audit.log`. There is no tool that can read or edit that file, so the agent cannot cover its tracks.
 
 Results that contain other people's words are also labeled as data rather than instructions when they are handed to the model. That is a mitigation, not a fix. Nothing here makes prompt injection impossible, and you should still read previews.
-
----
 
 ## 6. Voice notes
 
@@ -683,8 +671,6 @@ Transcription runs in the background. A slow provider never stalls your
 WhatsApp connection, and a failure is quiet: the voice note is still stored and
 still readable, it just has no search text.
 
----
-
 ## 7. How it works
 
 ```
@@ -741,8 +727,6 @@ Six tools instead of a dozen overlapping ones. Every tool definition is loaded
 into your model's context at the start of every session, whether you use it or
 not, so a tighter tool set leaves more room for your actual work.
 
----
-
 ## 8. Your data
 
 Everything lives in `~/.whatsapp-mcp`, readable only by you.
@@ -759,8 +743,6 @@ Your messages reach an AI model only when your agent calls a tool, and only the 
 
 To wipe everything, delete the folder. You should also remove the linked device from your phone under Settings, Linked Devices.
 
----
-
 ## 9. Risks
 
 Read this properly. It is short.
@@ -774,8 +756,6 @@ Read this properly. It is short.
 **Prompt injection is real.** See [Sending safely](#5-sending-safely). Read previews.
 
 **Not affiliated with WhatsApp or Meta** in any way.
-
----
 
 ## 10. Troubleshooting
 
@@ -792,8 +772,6 @@ Read this properly. It is short.
 **It says sending is disabled.** That is the default. Add `--allow-send` to the arguments in your client config.
 
 **Messages are out of sync.** Delete `~/.whatsapp-mcp/messages.db` and restart. That rebuilds history without unlinking your device. Deleting `session.db` instead forces a fresh QR pairing.
-
----
 
 ## 11. Message Claude from WhatsApp
 
@@ -820,8 +798,6 @@ number for Claude to be its own contact rather than you talking to yourself.
 
 Replies can be spoken, so the answer arrives as a voice note in your own cloned
 voice rather than as text.
-
----
 
 ## 12. Running it 24/7
 
@@ -908,11 +884,6 @@ scp -r /var/lib/whatsapp-mcp   newbox:/var/lib/
 scp /etc/whatsapp-mcp.env      newbox:/etc/
 scp /usr/local/bin/whatsapp-mcp newbox:/usr/local/bin/
 ```
-
----
-
-
----
 
 ## FAQ ❓
 
@@ -1040,8 +1011,6 @@ The history already downloaded stays on your machine until you delete the data
 directory.
 
 </details>
-
----
 
 ## Questions
 
