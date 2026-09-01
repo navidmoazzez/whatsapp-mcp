@@ -1056,4 +1056,4 @@ Navid Moazzez is a leading AI business strategist, and the host of the AI Creato
 
 ---
 
-© 2026 NM Media. Made with ❤️ by [Navid Moazzez](https://navid.me).
+© 2026 [NM Media](https://navid.media). Made with ❤️ by [Navid Moazzez](https://navid.me).
