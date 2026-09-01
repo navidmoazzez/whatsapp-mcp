@@ -23,7 +23,7 @@ One binary. Go 1.26 or newer and nothing else. No Python, no uv, no ffmpeg, and
 no C compiler on Windows.
 
 ```bash
-go install github.com/thenavidm/whatsapp-mcp/cmd/whatsapp-mcp@latest
+go install github.com/navidmoazzez/whatsapp-mcp/cmd/whatsapp-mcp@latest
 whatsapp-mcp login
 ```
 

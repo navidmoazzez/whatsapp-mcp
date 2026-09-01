@@ -1,0 +1,11 @@
+{
+  "name": "@thenavidm/whatsapp-mcp-darwin-arm64",
+  "version": "0.6.0",
+  "description": "Prebuilt whatsapp-mcp binary for darwin-arm64. Installed automatically by @thenavidm/whatsapp-mcp.",
+  "license": "MIT",
+  "author": "Navid Moazzez <https://navid.me>",
+  "repository": { "type": "git", "url": "git+https://github.com/navidmoazzez/whatsapp-mcp.git" },
+  "os": ["darwin"],
+  "cpu": ["arm64"],
+  "files": ["bin"]
+}

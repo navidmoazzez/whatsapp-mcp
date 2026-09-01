@@ -45,7 +45,7 @@ fi
 if [[ ! -x "$BIN" ]]; then
   if command -v go >/dev/null; then
     echo "==> building from source"
-    GOBIN=/usr/local/bin go install github.com/thenavidm/whatsapp-mcp/cmd/whatsapp-mcp@latest
+    GOBIN=/usr/local/bin go install github.com/navidmoazzez/whatsapp-mcp/cmd/whatsapp-mcp@latest
   else
     echo "no binary at ${BIN} and no Go toolchain. Upload the binary first, see the comment above." >&2
     exit 1
