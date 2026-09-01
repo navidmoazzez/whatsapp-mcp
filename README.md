@@ -9,11 +9,13 @@
 [![YouTube](https://img.shields.io/badge/YouTube-@thenavidm-red?logo=youtube&logoColor=white)](https://youtube.com/@thenavidm?sub_confirmation=1)
 [![X](https://img.shields.io/badge/X-@thenavidm-black?logo=x)](https://x.com/thenavidm)
 
-Give any AI agent real access to your personal WhatsApp. Search your history, read any conversation, and send messages, from Claude Code, Claude Desktop, Claude.ai, Cursor, Codex, or any MCP client.
+It links as a companion device, the same way WhatsApp Web does, so your phone can be asleep.
 
-One binary that links as a companion device, the same way WhatsApp Web does. No Python, no Docker, no second process.
+Sending is off until you turn it on, limited to the chats you allow, and every attempt is logged.
 
-Built by [Navid Moazzez](https://navid.me).
+One Go binary. No Python, no Docker, no second process.
+
+Built and maintained by [Navid Moazzez](https://navid.me).
 
 ```
 You: what did I promise Sarah about the deadline?
