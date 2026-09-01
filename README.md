@@ -15,7 +15,7 @@ Sending is off until you turn it on, limited to the chats you allow, and every a
 
 One Go binary. No Python, no Docker, no second process.
 
-Built and maintained by [Navid Moazzez](https://navid.me).
+Built and maintained by [Navid Moazzez](https://navid.me?utm_source=github&utm_medium=readme&utm_campaign=whatsapp-mcp).
 
 ```
 You: what did I promise Sarah about the deadline?
@@ -1056,4 +1056,4 @@ Navid Moazzez is a leading AI business strategist, and the host of the AI Creato
 
 ---
 
-© 2026 [NM Media](https://navid.media). Made with ❤️ by [Navid Moazzez](https://navid.me).
+© 2026 [NM Media](https://navid.media?utm_source=github&utm_medium=readme&utm_campaign=whatsapp-mcp). Made with ❤️ by [Navid Moazzez](https://navid.me?utm_source=github&utm_medium=readme&utm_campaign=whatsapp-mcp).
