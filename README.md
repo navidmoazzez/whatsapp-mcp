@@ -43,7 +43,6 @@ Claude: Searching your WhatsApp history.
 | 10 | [Troubleshooting](#10-troubleshooting) | When something breaks |
 | 11 | [Message Claude from WhatsApp](#11-message-claude-from-whatsapp) | Optional. Your phone as the terminal |
 | 12 | [Running it 24/7](#12-running-it-247) | On a server, so it never sleeps |
-| 13 | [Build from source](#13-build-from-source) | Contributing |
 | 14 | [FAQ](#faq-) | Common questions |
 
 ---
@@ -912,32 +911,6 @@ scp /usr/local/bin/whatsapp-mcp newbox:/usr/local/bin/
 
 ---
 
-## 13. Build from source
-
-```bash
-git clone https://github.com/navidmoazzez/whatsapp-mcp.git
-cd whatsapp-mcp
-go build ./cmd/whatsapp-mcp
-go test ./...
-```
-
-The binary is pure Go with no cgo, so it cross compiles anywhere:
-
-```bash
-CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build ./cmd/whatsapp-mcp
-```
-
-Layout:
-
-| Path | What is in it |
-|---|---|
-| `cmd/whatsapp-mcp` | Entry point and flags |
-| `internal/store` | SQLite schema, indexes, FTS5 search |
-| `internal/wa` | WhatsApp link, pairing, history sync |
-| `internal/mcpserver` | MCP tools |
-| `internal/safety` | Send policy, allowlist, rate limit, audit log |
-
-Issues and pull requests welcome.
 
 ---
 
@@ -958,7 +931,7 @@ You never call the tools yourself.
 <details>
 <summary><strong>Is this the official WhatsApp API?</strong></summary>
 
-No. It uses the companion device protocol, the same one WhatsApp Web uses, so
+This is not the official API. It uses the companion device protocol, the same one WhatsApp Web uses, so
 it reaches your real personal inbox. WhatsApp does not support this for
 automation.
 
@@ -970,7 +943,7 @@ window it can only send pre-approved templates.
 <details>
 <summary><strong>Could my number get banned?</strong></summary>
 
-Yes. WhatsApp bans accounts for automated behavior, and sending in volume is
+It can happen. WhatsApp bans accounts for automated behavior, and sending in volume is
 the fastest way to get flagged. Reading is far lower risk than sending.
 
 That is one reason sending is off by default and rate limited when you turn it
@@ -980,7 +953,7 @@ on.
 <details>
 <summary><strong>Do my messages get uploaded anywhere?</strong></summary>
 
-Not by this software. There is no telemetry and no phone home. Your history
+This software uploads nothing. There is no telemetry and no phone home. Your history
 sits in a SQLite file on whatever machine you run it on.
 
 Two exceptions you opt into. A hosted transcription provider receives the audio
@@ -993,7 +966,7 @@ installing this.
 <details>
 <summary><strong>Does my phone need to stay on?</strong></summary>
 
-No. It links as a companion device, so once paired your phone can be asleep or
+Your phone can stay off. It links as a companion device, so once paired your phone can be asleep or
 out of battery. The machine running the server needs to be awake, which is why
 some people put it on a small always-on box.
 </details>
@@ -1011,7 +984,7 @@ Everything arriving from that moment on is captured in full.
 <details>
 <summary><strong>Can it read my voice notes?</strong></summary>
 
-Yes, if you turn transcription on. They become searchable text alongside
+It can, if you turn transcription on. They become searchable text alongside
 everything you have typed, which is the single biggest blind spot in a WhatsApp
 archive.
 
@@ -1043,7 +1016,7 @@ done about it and what is not.
 <details>
 <summary><strong>Does it work with groups?</strong></summary>
 
-Yes. Group chats are searched and read like any other conversation, and sender
+It works with groups. Group chats are searched and read like any other conversation, and sender
 names are resolved so you can see who said what.
 </details>
 
@@ -1058,6 +1031,10 @@ directory.
 </details>
 
 ---
+
+## Questions
+
+Run into a problem or have a question? [Open an issue](https://github.com/navidmoazzez/whatsapp-mcp/issues) and I will help.
 
 ## About the author
 
