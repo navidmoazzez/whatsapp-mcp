@@ -38,7 +38,7 @@ publishing tool. That reasoning does not transfer here:
   instruct a model to forward private history somewhere.
 - A wrong send goes to a named human being who knows you, cannot be unsent, and
   costs a relationship rather than a deleted post.
-- WhatsApp bans accounts for automated behaviour. A wrong send risks the number.
+- WhatsApp bans accounts for automated behavior. A wrong send risks the number.
 
 So `AllowSend` must be explicitly enabled, an allowlist can narrow sends to
 specific chats, sends are capped per rolling minute, and every attempt is

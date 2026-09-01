@@ -37,7 +37,7 @@ const target = TARGETS[key]
 if (!target) {
   console.error(
     `whatsapp-mcp: no prebuilt binary for ${key}.\n` +
-      `Build from source instead: go install github.com/thenavidm/whatsapp-mcp/cmd/whatsapp-mcp@latest`,
+      `Build from source instead: go install github.com/navidmoazzez/whatsapp-mcp/cmd/whatsapp-mcp@latest`,
   )
   process.exit(0) // Do not fail the install; the error message is the useful part.
 }
@@ -48,7 +48,7 @@ const dest = join(here, exe)
 if (existsSync(dest)) process.exit(0)
 
 const url =
-  `https://github.com/thenavidm/whatsapp-mcp/releases/download/` +
+  `https://github.com/navidmoazzez/whatsapp-mcp/releases/download/` +
   `v${version}/whatsapp-mcp_${target}.gz`
 
 try {
@@ -61,7 +61,7 @@ try {
 } catch (err) {
   console.error(
     `whatsapp-mcp: could not download the binary (${err.message}).\n` +
-      `Build from source instead: go install github.com/thenavidm/whatsapp-mcp/cmd/whatsapp-mcp@latest`,
+      `Build from source instead: go install github.com/navidmoazzez/whatsapp-mcp/cmd/whatsapp-mcp@latest`,
   )
   process.exit(0)
 }

@@ -1,4 +1,4 @@
-module github.com/thenavidm/whatsapp-mcp
+module github.com/navidmoazzez/whatsapp-mcp
 
 go 1.26.0
 

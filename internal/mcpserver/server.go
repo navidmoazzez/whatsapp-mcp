@@ -21,10 +21,10 @@ import (
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 
-	"github.com/thenavidm/whatsapp-mcp/internal/safety"
-	"github.com/thenavidm/whatsapp-mcp/internal/store"
-	"github.com/thenavidm/whatsapp-mcp/internal/voice"
-	"github.com/thenavidm/whatsapp-mcp/internal/wa"
+	"github.com/navidmoazzez/whatsapp-mcp/internal/safety"
+	"github.com/navidmoazzez/whatsapp-mcp/internal/store"
+	"github.com/navidmoazzez/whatsapp-mcp/internal/voice"
+	"github.com/navidmoazzez/whatsapp-mcp/internal/wa"
 )
 
 // Version is stamped at build time.

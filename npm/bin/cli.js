@@ -12,7 +12,7 @@ const exe = join(here, process.platform === 'win32' ? 'whatsapp-mcp.exe' : 'what
 if (!existsSync(exe)) {
   console.error(
     'whatsapp-mcp: the binary is missing. Reinstall, or build from source:\n' +
-      '  go install github.com/thenavidm/whatsapp-mcp/cmd/whatsapp-mcp@latest',
+      '  go install github.com/navidmoazzez/whatsapp-mcp/cmd/whatsapp-mcp@latest',
   )
   process.exit(1)
 }
