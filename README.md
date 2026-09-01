@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="https://cdn.navid.media/connectors/whatsapp-icon.png" alt="WhatsApp" width="88">
-</div>
+<img src="https://cdn.navid.media/connectors/whatsapp-icon.png" alt="WhatsApp" width="88">
 
 # WhatsApp MCP
 
@@ -928,6 +926,7 @@ exposes WhatsApp.
 
 You install it once, point your client at it, and then ask in plain language.
 You never call the tools yourself.
+
 </details>
 
 <details>
@@ -940,6 +939,7 @@ automation.
 The official Business API is a different thing entirely. It only reaches a
 business number you own, cannot see a personal inbox, and outside a 24 hour
 window it can only send pre-approved templates.
+
 </details>
 
 <details>
@@ -950,6 +950,7 @@ the fastest way to get flagged. Reading is far lower risk than sending.
 
 That is one reason sending is off by default and rate limited when you turn it
 on.
+
 </details>
 
 <details>
@@ -963,6 +964,7 @@ of a voice note, and nothing else. And anything a tool returns enters your
 conversation with the model, which goes wherever that model runs. That second
 one is true of every MCP server and is the thing to understand before
 installing this.
+
 </details>
 
 <details>
@@ -971,6 +973,7 @@ installing this.
 Your phone can stay off. It links as a companion device, so once paired your phone can be asleep or
 out of battery. The machine running the server needs to be awake, which is why
 some people put it on a small always-on box.
+
 </details>
 
 <details>
@@ -981,6 +984,7 @@ asks for as much as it will give, which in practice is months to years, but it
 is never guaranteed complete.
 
 Everything arriving from that moment on is captured in full.
+
 </details>
 
 <details>
@@ -992,6 +996,7 @@ archive.
 
 Four providers: local Whisper if nothing should leave your machine, or Groq,
 OpenAI and ElevenLabs if you want it faster or more accurate across languages.
+
 </details>
 
 <details>
@@ -1002,6 +1007,7 @@ anything it sends is from you.
 
 When you turn it on it previews first, obeys a chat allowlist, is rate limited,
 and writes every attempt to a log no tool can edit.
+
 </details>
 
 <details>
@@ -1013,6 +1019,7 @@ send is exposed.
 
 Nothing removes that risk entirely. [SECURITY.md](./SECURITY.md) covers what is
 done about it and what is not.
+
 </details>
 
 <details>
@@ -1020,6 +1027,7 @@ done about it and what is not.
 
 It works with groups. Group chats are searched and read like any other conversation, and sender
 names are resolved so you can see who said what.
+
 </details>
 
 <details>
@@ -1030,6 +1038,7 @@ it loses access at once.
 
 The history already downloaded stays on your machine until you delete the data
 directory.
+
 </details>
 
 ---
