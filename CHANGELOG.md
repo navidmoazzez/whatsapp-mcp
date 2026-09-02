@@ -1,4 +1,4 @@
-# WhatsApp MCP Versions
+# WhatsApp MCP changelog
 
 | Component | Version | Last Updated |
 |-----------|---------|--------------|
