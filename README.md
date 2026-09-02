@@ -16,17 +16,7 @@ One Go binary. No Python, no Docker, no second process.
 
 Built and maintained by [Navid Moazzez](https://navid.me?utm_source=github&utm_medium=readme&utm_campaign=whatsapp-mcp).
 
-```
-You: what did I promise Sarah about the deadline?
-
-Claude: Searching your WhatsApp history.
-
-  Sarah Chen, 14 August
-  "I'll have the first draft with you by the 22nd, worst case
-   the 23rd if the client review slips."
-
-  You also mentioned it again on 19 August, confirming the 22nd.
-```
+<img src="https://cdn.navid.media/repos/whatsapp-mcp.gif?v=1" alt="Claude Code using the WhatsApp MCP server" width="520">
 
 ## Contents
 
