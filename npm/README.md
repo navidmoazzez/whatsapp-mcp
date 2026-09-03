@@ -841,7 +841,7 @@ CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o whatsapp-mcp ./cmd/whatsapp-mc
 scp whatsapp-mcp root@your-server:/usr/local/bin/whatsapp-mcp
 
 # On the server
-curl -fsSL https://raw.githubusercontent.com/navidmoazzez/whatsapp-mcp/main/deploy/install.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/thenavidm/whatsapp-mcp/main/deploy/install.sh | sudo bash
 ```
 
 The script is deliberately tidy about sharing a box with other services:
@@ -915,7 +915,7 @@ scp /usr/local/bin/whatsapp-mcp newbox:/usr/local/bin/
 ## 13. Build from source
 
 ```bash
-git clone https://github.com/navidmoazzez/whatsapp-mcp.git
+git clone https://github.com/thenavidm/whatsapp-mcp.git
 cd whatsapp-mcp
 go build ./cmd/whatsapp-mcp
 go test ./...

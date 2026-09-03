@@ -7,7 +7,7 @@ does, what protects you, and what it cannot protect you from.
 ## Reporting a vulnerability
 
 Use GitHub's private vulnerability reporting: open the
-[Security tab](https://github.com/navidmoazzez/whatsapp-mcp/security/advisories/new)
+[Security tab](https://github.com/thenavidm/whatsapp-mcp/security/advisories/new)
 and click **Report a vulnerability**.
 
 That keeps the report private until a fix exists, which a public issue does

@@ -21,13 +21,13 @@ import (
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 
-	"github.com/navidmoazzez/whatsapp-mcp/internal/agent"
-	"github.com/navidmoazzez/whatsapp-mcp/internal/mcpserver"
-	"github.com/navidmoazzez/whatsapp-mcp/internal/safety"
-	"github.com/navidmoazzez/whatsapp-mcp/internal/store"
-	"github.com/navidmoazzez/whatsapp-mcp/internal/transcribe"
-	"github.com/navidmoazzez/whatsapp-mcp/internal/voice"
-	"github.com/navidmoazzez/whatsapp-mcp/internal/wa"
+	"github.com/thenavidm/whatsapp-mcp/internal/agent"
+	"github.com/thenavidm/whatsapp-mcp/internal/mcpserver"
+	"github.com/thenavidm/whatsapp-mcp/internal/safety"
+	"github.com/thenavidm/whatsapp-mcp/internal/store"
+	"github.com/thenavidm/whatsapp-mcp/internal/transcribe"
+	"github.com/thenavidm/whatsapp-mcp/internal/voice"
+	"github.com/thenavidm/whatsapp-mcp/internal/wa"
 )
 
 // version is overridden at release time with -ldflags.
@@ -100,7 +100,7 @@ Auto-reply (optional, off by default):
 Everything is written to stderr. Stdout carries the MCP protocol and must stay
 clean, so never redirect stderr into stdout.
 
-Docs: https://github.com/navidmoazzez/whatsapp-mcp
+Docs: https://github.com/thenavidm/whatsapp-mcp
 `
 
 func main() {

@@ -24,10 +24,10 @@ import (
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/reflect/protoreflect"
 
-	"github.com/navidmoazzez/whatsapp-mcp/internal/agent"
-	"github.com/navidmoazzez/whatsapp-mcp/internal/store"
-	"github.com/navidmoazzez/whatsapp-mcp/internal/transcribe"
-	"github.com/navidmoazzez/whatsapp-mcp/internal/voice"
+	"github.com/thenavidm/whatsapp-mcp/internal/agent"
+	"github.com/thenavidm/whatsapp-mcp/internal/store"
+	"github.com/thenavidm/whatsapp-mcp/internal/transcribe"
+	"github.com/thenavidm/whatsapp-mcp/internal/voice"
 )
 
 // How much backlog to ask WhatsApp for during pairing. The defaults deliver
